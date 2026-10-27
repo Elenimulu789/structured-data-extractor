@@ -1,0 +1,14 @@
+NORTH SOUND OFFICE SUPPLY — ACCOUNTS RECEIVABLE
+Invoice: NS-2024-1042
+Vendor: North Sound Office Supply
+Date: 12th of Oct, 2024
+Currency: USD
+Bill to: The Archives Community Studio
+Seattle, WA
+Description | Quantity | Unit price | Line total
+Studio monitor | 2 | $249.50 | $499.00
+USB-C dock | 1 | $1,249.50 | $1,249.50
+Subtotal: $1,748.50
+Tax: $174.85
+Total: $1,923.35
+Please retain this invoice for your records.

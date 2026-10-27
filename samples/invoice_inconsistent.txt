@@ -1,0 +1,9 @@
+Invoice: BAD-2024-1
+Vendor: Inconsistent Vendor Example
+Date: 2024-10-12
+Currency: USD
+Equipment rental | 1 | $100.00 | $100.00
+Subtotal: $100.00
+Tax: $10.00
+Total: $999.00
+This document contains an actual contradiction. Do not invent a correction.

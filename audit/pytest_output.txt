@@ -1,0 +1,50 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.17, pytest-9.1.1, pluggy-1.7.0 -- /workspace/scratch/356f873ca722/structured-data-extractor/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /workspace/scratch/356f873ca722/structured-data-extractor
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.15.1
+collecting ... collected 39 items
+
+tests/test_audit_regressions.py::test_naive_baseline_accepts_wrong_subtotal_final_rejects PASSED [  2%]
+tests/test_audit_regressions.py::test_naive_baseline_ignores_quantity_final_rejects PASSED [  5%]
+tests/test_audit_regressions.py::test_retry_baseline_grows_final_bounded PASSED [  7%]
+tests/test_extraction.py::test_golden_pdf_extraction PASSED              [ 10%]
+tests/test_extraction.py::test_quantity_rejected[0] PASSED               [ 12%]
+tests/test_extraction.py::test_quantity_rejected[-1] PASSED              [ 15%]
+tests/test_extraction.py::test_quantity_rejected[1.5] PASSED             [ 17%]
+tests/test_extraction.py::test_quantity_rejected[True] PASSED            [ 20%]
+tests/test_extraction.py::test_quantity_rejected[2] PASSED               [ 23%]
+tests/test_extraction.py::test_invalid_money_rejected[-1.00] PASSED      [ 25%]
+tests/test_extraction.py::test_invalid_money_rejected[NaN] PASSED        [ 28%]
+tests/test_extraction.py::test_invalid_money_rejected[Infinity] PASSED   [ 30%]
+tests/test_extraction.py::test_invalid_money_rejected[True] PASSED       [ 33%]
+tests/test_extraction.py::test_invalid_money_rejected[1.234] PASSED      [ 35%]
+tests/test_extraction.py::test_invalid_money_rejected[1.234,56] PASSED   [ 38%]
+tests/test_extraction.py::test_cross_field_reconciliation[total_amount] PASSED [ 41%]
+tests/test_extraction.py::test_cross_field_reconciliation[subtotal] PASSED [ 43%]
+tests/test_extraction.py::test_line_multiplication_checked PASSED        [ 46%]
+tests/test_extraction.py::test_two_cent_tolerance PASSED                 [ 48%]
+tests/test_extraction.py::test_ambiguous_date_and_extras_rejected PASSED [ 51%]
+tests/test_extraction.py::test_html_ingestion PASSED                     [ 53%]
+tests/test_extraction.py::test_ingestion_errors[invalid_pdf] PASSED      [ 56%]
+tests/test_extraction.py::test_ingestion_errors[empty_text] PASSED       [ 58%]
+tests/test_extraction.py::test_ingestion_errors[oversize_text] PASSED    [ 61%]
+tests/test_extraction.py::test_empty_lines_rejected PASSED               [ 64%]
+tests/test_fallbacks.py::test_reflection_success_attempt_two PASSED      [ 66%]
+tests/test_fallbacks.py::test_dlq_after_three_calls PASSED               [ 69%]
+tests/test_fallbacks.py::test_no_reflection_one_call PASSED              [ 71%]
+tests/test_fallbacks.py::test_heuristic_success_still_validates PASSED   [ 74%]
+tests/test_fallbacks.py::test_heuristic_cannot_bypass_business_rules PASSED [ 76%]
+tests/test_fallbacks.py::test_prompt_size_bounded PASSED                 [ 79%]
+tests/test_fallbacks.py::test_transient_failure_retries PASSED           [ 82%]
+tests/test_fallbacks.py::test_permanent_provider_failure_stops PASSED    [ 84%]
+tests/test_fallbacks.py::test_dlq_disk_failure_is_visible PASSED         [ 87%]
+tests/test_fallbacks.py::test_actual_contradiction_is_not_invented_away PASSED [ 89%]
+tests/test_fallbacks.py::test_openai_adapter_sends_strict_schema_and_returns_raw PASSED [ 92%]
+tests/test_fallbacks.py::test_refusal_is_not_parsed PASSED               [ 94%]
+tests/test_ui.py::test_ui_extract_and_reflection PASSED                  [ 97%]
+tests/test_ui.py::test_ui_hard_failure PASSED                            [100%]
+
+============================== 39 passed in 3.40s ==============================

@@ -1,0 +1,13 @@
+[project]
+name = "structured-data-extractor"
+version = "1.0.0"
+description = "Auditable invoice extraction with validation, reflection, and DLQ"
+requires-python = ">=3.11"
+dependencies = [
+  "pydantic>=2.10,<3", "openai>=1.60,<3", "pypdf>=5,<7",
+  "beautifulsoup4>=4.12,<5", "python-dotenv>=1,<2", "streamlit>=1.42,<2",
+  "json-repair>=0.39,<1", "pytest>=8,<10"
+]
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
